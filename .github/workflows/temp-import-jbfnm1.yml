@@ -17,23 +17,20 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Download Internet Archive metadata and OCR page data
+      - name: Download Internet Archive source data
         shell: bash
         run: |
           set -euo pipefail
           base='https://archive.org/download/jbfnmukhtar'
-          curl --fail --location --retry 5 --retry-all-errors \
-            --connect-timeout 30 --max-time 900 \
-            -o jbfnm1_djvu.txt "$base/jbfnm1_djvu.txt"
-          curl --fail --location --retry 5 --retry-all-errors \
-            --connect-timeout 30 --max-time 900 \
-            -o jbfnm1_djvu.xml "$base/jbfnm1_djvu.xml"
-          curl --fail --location --retry 5 --retry-all-errors \
-            --connect-timeout 30 --max-time 900 \
-            -o jbfnm1_page_numbers.json "$base/jbfnm1_page_numbers.json"
+          for file in jbfnm1_djvu.txt jbfnm1_djvu.xml jbfnm1_page_numbers.json jbfnm1.pdf; do
+            curl --fail --location --retry 5 --retry-all-errors \
+              --connect-timeout 30 --max-time 900 \
+              -o "$file" "$base/$file"
+          done
           curl --fail --location --retry 5 --retry-all-errors \
             --connect-timeout 30 --max-time 900 \
             -o jbfnmukhtar_metadata.json 'https://archive.org/metadata/jbfnmukhtar'
+          sha256sum jbfnm1.pdf > jbfnm1.pdf.sha256
 
       - name: Split Volume One OCR into page-preserving chunks
         shell: bash
@@ -42,24 +39,22 @@ jobs:
           python - <<'PY'
           from __future__ import annotations
           import json
-          import re
           import xml.etree.ElementTree as ET
           from pathlib import Path
 
-          xml_path = Path('jbfnm1_djvu.xml')
           out_dir = Path('jbfnm1_chunks')
           out_dir.mkdir(exist_ok=True)
           for old in out_dir.glob('*.txt'):
               old.unlink()
 
-          root = ET.parse(xml_path).getroot()
+          root = ET.parse('jbfnm1_djvu.xml').getroot()
           objects = root.findall('.//OBJECT')
           if not objects:
               raise SystemExit('No OCR page objects found in DjVu XML')
 
-          pages: list[str] = []
-          for leaf, obj in enumerate(objects):
-              lines: list[str] = []
+          pages = []
+          for obj in objects:
+              lines = []
               for line in obj.findall('.//LINE'):
                   words = [(w.text or '').strip() for w in line.findall('.//WORD')]
                   text = ' '.join(w for w in words if w)
@@ -73,19 +68,11 @@ jobs:
               end = min(start + chunk_size, len(pages))
               number = start // chunk_size + 1
               name = f'chunk-{number:03d}-ocr-pages-{start+1:04d}-{end:04d}.txt'
-              chunks = []
+              content = []
               for page_index in range(start, end):
-                  chunks.append(
-                      f'<<<IA_OCR_PAGE_{page_index+1:04d}>>>\n'
-                      f'{pages[page_index]}\n'
-                  )
-              (out_dir / name).write_text('\n'.join(chunks), encoding='utf-8')
-              index.append({
-                  'chunk': number,
-                  'file': name,
-                  'ocr_page_start': start + 1,
-                  'ocr_page_end': end,
-              })
+                  content.append(f'<<<IA_OCR_PAGE_{page_index+1:04d}>>>\n{pages[page_index]}\n')
+              (out_dir / name).write_text('\n'.join(content), encoding='utf-8')
+              index.append({'chunk': number, 'file': name, 'ocr_page_start': start + 1, 'ocr_page_end': end})
 
           metadata = json.loads(Path('jbfnmukhtar_metadata.json').read_text(encoding='utf-8'))
           relevant_files = []
@@ -93,7 +80,6 @@ jobs:
               name = item.get('name', '')
               if name.startswith('jbfnm1'):
                   relevant_files.append({k: item.get(k) for k in ('name', 'size', 'format', 'source', 'md5', 'sha1') if item.get(k) is not None})
-
           manifest = {
               'identifier': 'jbfnmukhtar',
               'volume': 1,
@@ -102,16 +88,20 @@ jobs:
               'chunks': index,
               'internet_archive_files': relevant_files,
           }
-          Path('jbfnm1_chunk_manifest.json').write_text(
-              json.dumps(manifest, ensure_ascii=False, indent=2) + '\n',
-              encoding='utf-8',
-          )
+          Path('jbfnm1_chunk_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print(f'Generated {len(index)} chunks from {len(pages)} OCR pages.')
           PY
-          ls -lah jbfnm1_chunks | head
-          wc -l -w -c jbfnm1_chunks/*.txt | tail -1
 
-      - name: Commit source data to temporary branch
+      - name: Upload original scan for model-side verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: jbfnm1-original-scan
+          path: |
+            jbfnm1.pdf
+            jbfnm1.pdf.sha256
+          retention-days: 7
+
+      - name: Commit textual source data to temporary branch
         shell: bash
         run: |
           set -euo pipefail
@@ -120,8 +110,8 @@ jobs:
           git add jbfnm1_djvu.txt jbfnm1_djvu.xml jbfnm1_page_numbers.json \
             jbfnmukhtar_metadata.json jbfnm1_chunk_manifest.json jbfnm1_chunks
           if git diff --cached --quiet; then
-            echo 'No source changes to commit.'
+            echo 'No textual source changes to commit.'
             exit 0
           fi
-          git commit -m 'Prepare page-preserving Volume One OCR chunks [skip ci]'
+          git commit -m 'Refresh page-preserving Volume One OCR chunks [skip ci]'
           git push origin HEAD:${{ github.head_ref }}
