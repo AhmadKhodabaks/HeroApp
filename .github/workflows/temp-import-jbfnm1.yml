@@ -101,6 +101,19 @@ jobs:
             jbfnm1.pdf.sha256
           retention-days: 7
 
+      - name: Upload OCR source bundle for model-side processing
+        uses: actions/upload-artifact@v4
+        with:
+          name: jbfnm1-ocr-source
+          path: |
+            jbfnm1_djvu.txt
+            jbfnm1_djvu.xml
+            jbfnm1_page_numbers.json
+            jbfnmukhtar_metadata.json
+            jbfnm1_chunk_manifest.json
+            jbfnm1_chunks
+          retention-days: 7
+
       - name: Commit textual source data to temporary branch
         shell: bash
         run: |
