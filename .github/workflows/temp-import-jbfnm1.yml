@@ -1,0 +1,36 @@
+name: Temporary IA source import
+
+on:
+  pull_request:
+    paths:
+      - temp-import-jbfnm1.trigger
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Download OCR source
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-all-errors \
+            --connect-timeout 30 --max-time 900 \
+            -o jbfnm1_djvu.txt \
+            https://archive.org/download/jbfnmukhtar/jbfnm1_djvu.txt
+          wc -l -w -c jbfnm1_djvu.txt
+      - name: Commit source to temporary branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Temporary Source Import'
+          git config user.email 'noreply@openai.com'
+          git add jbfnm1_djvu.txt
+          git commit -m 'Temporarily import jbfnm1 OCR source [skip ci]'
+          git push origin HEAD:${{ github.head_ref }}
