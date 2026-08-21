@@ -1,0 +1,424 @@
+{
+  "identifier": "jbfnmukhtar",
+  "volume": 1,
+  "ocr_page_count": 527,
+  "chunk_size": 10,
+  "chunks": [
+    {
+      "chunk": 1,
+      "file": "chunk-001-ocr-pages-0001-0010.txt",
+      "ocr_page_start": 1,
+      "ocr_page_end": 10
+    },
+    {
+      "chunk": 2,
+      "file": "chunk-002-ocr-pages-0011-0020.txt",
+      "ocr_page_start": 11,
+      "ocr_page_end": 20
+    },
+    {
+      "chunk": 3,
+      "file": "chunk-003-ocr-pages-0021-0030.txt",
+      "ocr_page_start": 21,
+      "ocr_page_end": 30
+    },
+    {
+      "chunk": 4,
+      "file": "chunk-004-ocr-pages-0031-0040.txt",
+      "ocr_page_start": 31,
+      "ocr_page_end": 40
+    },
+    {
+      "chunk": 5,
+      "file": "chunk-005-ocr-pages-0041-0050.txt",
+      "ocr_page_start": 41,
+      "ocr_page_end": 50
+    },
+    {
+      "chunk": 6,
+      "file": "chunk-006-ocr-pages-0051-0060.txt",
+      "ocr_page_start": 51,
+      "ocr_page_end": 60
+    },
+    {
+      "chunk": 7,
+      "file": "chunk-007-ocr-pages-0061-0070.txt",
+      "ocr_page_start": 61,
+      "ocr_page_end": 70
+    },
+    {
+      "chunk": 8,
+      "file": "chunk-008-ocr-pages-0071-0080.txt",
+      "ocr_page_start": 71,
+      "ocr_page_end": 80
+    },
+    {
+      "chunk": 9,
+      "file": "chunk-009-ocr-pages-0081-0090.txt",
+      "ocr_page_start": 81,
+      "ocr_page_end": 90
+    },
+    {
+      "chunk": 10,
+      "file": "chunk-010-ocr-pages-0091-0100.txt",
+      "ocr_page_start": 91,
+      "ocr_page_end": 100
+    },
+    {
+      "chunk": 11,
+      "file": "chunk-011-ocr-pages-0101-0110.txt",
+      "ocr_page_start": 101,
+      "ocr_page_end": 110
+    },
+    {
+      "chunk": 12,
+      "file": "chunk-012-ocr-pages-0111-0120.txt",
+      "ocr_page_start": 111,
+      "ocr_page_end": 120
+    },
+    {
+      "chunk": 13,
+      "file": "chunk-013-ocr-pages-0121-0130.txt",
+      "ocr_page_start": 121,
+      "ocr_page_end": 130
+    },
+    {
+      "chunk": 14,
+      "file": "chunk-014-ocr-pages-0131-0140.txt",
+      "ocr_page_start": 131,
+      "ocr_page_end": 140
+    },
+    {
+      "chunk": 15,
+      "file": "chunk-015-ocr-pages-0141-0150.txt",
+      "ocr_page_start": 141,
+      "ocr_page_end": 150
+    },
+    {
+      "chunk": 16,
+      "file": "chunk-016-ocr-pages-0151-0160.txt",
+      "ocr_page_start": 151,
+      "ocr_page_end": 160
+    },
+    {
+      "chunk": 17,
+      "file": "chunk-017-ocr-pages-0161-0170.txt",
+      "ocr_page_start": 161,
+      "ocr_page_end": 170
+    },
+    {
+      "chunk": 18,
+      "file": "chunk-018-ocr-pages-0171-0180.txt",
+      "ocr_page_start": 171,
+      "ocr_page_end": 180
+    },
+    {
+      "chunk": 19,
+      "file": "chunk-019-ocr-pages-0181-0190.txt",
+      "ocr_page_start": 181,
+      "ocr_page_end": 190
+    },
+    {
+      "chunk": 20,
+      "file": "chunk-020-ocr-pages-0191-0200.txt",
+      "ocr_page_start": 191,
+      "ocr_page_end": 200
+    },
+    {
+      "chunk": 21,
+      "file": "chunk-021-ocr-pages-0201-0210.txt",
+      "ocr_page_start": 201,
+      "ocr_page_end": 210
+    },
+    {
+      "chunk": 22,
+      "file": "chunk-022-ocr-pages-0211-0220.txt",
+      "ocr_page_start": 211,
+      "ocr_page_end": 220
+    },
+    {
+      "chunk": 23,
+      "file": "chunk-023-ocr-pages-0221-0230.txt",
+      "ocr_page_start": 221,
+      "ocr_page_end": 230
+    },
+    {
+      "chunk": 24,
+      "file": "chunk-024-ocr-pages-0231-0240.txt",
+      "ocr_page_start": 231,
+      "ocr_page_end": 240
+    },
+    {
+      "chunk": 25,
+      "file": "chunk-025-ocr-pages-0241-0250.txt",
+      "ocr_page_start": 241,
+      "ocr_page_end": 250
+    },
+    {
+      "chunk": 26,
+      "file": "chunk-026-ocr-pages-0251-0260.txt",
+      "ocr_page_start": 251,
+      "ocr_page_end": 260
+    },
+    {
+      "chunk": 27,
+      "file": "chunk-027-ocr-pages-0261-0270.txt",
+      "ocr_page_start": 261,
+      "ocr_page_end": 270
+    },
+    {
+      "chunk": 28,
+      "file": "chunk-028-ocr-pages-0271-0280.txt",
+      "ocr_page_start": 271,
+      "ocr_page_end": 280
+    },
+    {
+      "chunk": 29,
+      "file": "chunk-029-ocr-pages-0281-0290.txt",
+      "ocr_page_start": 281,
+      "ocr_page_end": 290
+    },
+    {
+      "chunk": 30,
+      "file": "chunk-030-ocr-pages-0291-0300.txt",
+      "ocr_page_start": 291,
+      "ocr_page_end": 300
+    },
+    {
+      "chunk": 31,
+      "file": "chunk-031-ocr-pages-0301-0310.txt",
+      "ocr_page_start": 301,
+      "ocr_page_end": 310
+    },
+    {
+      "chunk": 32,
+      "file": "chunk-032-ocr-pages-0311-0320.txt",
+      "ocr_page_start": 311,
+      "ocr_page_end": 320
+    },
+    {
+      "chunk": 33,
+      "file": "chunk-033-ocr-pages-0321-0330.txt",
+      "ocr_page_start": 321,
+      "ocr_page_end": 330
+    },
+    {
+      "chunk": 34,
+      "file": "chunk-034-ocr-pages-0331-0340.txt",
+      "ocr_page_start": 331,
+      "ocr_page_end": 340
+    },
+    {
+      "chunk": 35,
+      "file": "chunk-035-ocr-pages-0341-0350.txt",
+      "ocr_page_start": 341,
+      "ocr_page_end": 350
+    },
+    {
+      "chunk": 36,
+      "file": "chunk-036-ocr-pages-0351-0360.txt",
+      "ocr_page_start": 351,
+      "ocr_page_end": 360
+    },
+    {
+      "chunk": 37,
+      "file": "chunk-037-ocr-pages-0361-0370.txt",
+      "ocr_page_start": 361,
+      "ocr_page_end": 370
+    },
+    {
+      "chunk": 38,
+      "file": "chunk-038-ocr-pages-0371-0380.txt",
+      "ocr_page_start": 371,
+      "ocr_page_end": 380
+    },
+    {
+      "chunk": 39,
+      "file": "chunk-039-ocr-pages-0381-0390.txt",
+      "ocr_page_start": 381,
+      "ocr_page_end": 390
+    },
+    {
+      "chunk": 40,
+      "file": "chunk-040-ocr-pages-0391-0400.txt",
+      "ocr_page_start": 391,
+      "ocr_page_end": 400
+    },
+    {
+      "chunk": 41,
+      "file": "chunk-041-ocr-pages-0401-0410.txt",
+      "ocr_page_start": 401,
+      "ocr_page_end": 410
+    },
+    {
+      "chunk": 42,
+      "file": "chunk-042-ocr-pages-0411-0420.txt",
+      "ocr_page_start": 411,
+      "ocr_page_end": 420
+    },
+    {
+      "chunk": 43,
+      "file": "chunk-043-ocr-pages-0421-0430.txt",
+      "ocr_page_start": 421,
+      "ocr_page_end": 430
+    },
+    {
+      "chunk": 44,
+      "file": "chunk-044-ocr-pages-0431-0440.txt",
+      "ocr_page_start": 431,
+      "ocr_page_end": 440
+    },
+    {
+      "chunk": 45,
+      "file": "chunk-045-ocr-pages-0441-0450.txt",
+      "ocr_page_start": 441,
+      "ocr_page_end": 450
+    },
+    {
+      "chunk": 46,
+      "file": "chunk-046-ocr-pages-0451-0460.txt",
+      "ocr_page_start": 451,
+      "ocr_page_end": 460
+    },
+    {
+      "chunk": 47,
+      "file": "chunk-047-ocr-pages-0461-0470.txt",
+      "ocr_page_start": 461,
+      "ocr_page_end": 470
+    },
+    {
+      "chunk": 48,
+      "file": "chunk-048-ocr-pages-0471-0480.txt",
+      "ocr_page_start": 471,
+      "ocr_page_end": 480
+    },
+    {
+      "chunk": 49,
+      "file": "chunk-049-ocr-pages-0481-0490.txt",
+      "ocr_page_start": 481,
+      "ocr_page_end": 490
+    },
+    {
+      "chunk": 50,
+      "file": "chunk-050-ocr-pages-0491-0500.txt",
+      "ocr_page_start": 491,
+      "ocr_page_end": 500
+    },
+    {
+      "chunk": 51,
+      "file": "chunk-051-ocr-pages-0501-0510.txt",
+      "ocr_page_start": 501,
+      "ocr_page_end": 510
+    },
+    {
+      "chunk": 52,
+      "file": "chunk-052-ocr-pages-0511-0520.txt",
+      "ocr_page_start": 511,
+      "ocr_page_end": 520
+    },
+    {
+      "chunk": 53,
+      "file": "chunk-053-ocr-pages-0521-0527.txt",
+      "ocr_page_start": 521,
+      "ocr_page_end": 527
+    }
+  ],
+  "internet_archive_files": [
+    {
+      "name": "jbfnm1.epub",
+      "size": "1407968",
+      "format": "EPUB",
+      "source": "derivative",
+      "md5": "1d6681ffc465581b8b0ef170639f8d92",
+      "sha1": "9b50f4c3bcfd1477a17dacc478205f78d26903a1"
+    },
+    {
+      "name": "jbfnm1.pdf",
+      "size": "11777330",
+      "format": "Image Container PDF",
+      "source": "original",
+      "md5": "ec3dfe52a6303df93aa22420b37be1dc",
+      "sha1": "2934b57d4c4f148d89599b40818a274b733d645a"
+    },
+    {
+      "name": "jbfnm1_chocr.html.gz",
+      "size": "14083894",
+      "format": "chOCR",
+      "source": "derivative",
+      "md5": "51812fd7050915b3a3c3d49cff189242",
+      "sha1": "937a26d9a61a5e16d46931d15ae1aa93c8d1234c"
+    },
+    {
+      "name": "jbfnm1_djvu.txt",
+      "size": "1703237",
+      "format": "DjVuTXT",
+      "source": "derivative",
+      "md5": "9e6994ccfd94bdc9c0108d101ccb68d2",
+      "sha1": "1b833cfe391effad160a95ddf24c03ce151bbb17"
+    },
+    {
+      "name": "jbfnm1_djvu.xml",
+      "size": "14394841",
+      "format": "Djvu XML",
+      "source": "derivative",
+      "md5": "f83b70dd0ad21ccf8cc73b09ab60a95b",
+      "sha1": "4370bedf08eb74cb1e31635456c536fbc487e88b"
+    },
+    {
+      "name": "jbfnm1_hocr.html",
+      "size": "25641597",
+      "format": "hOCR",
+      "source": "derivative",
+      "md5": "a4da9fbfa6ceca16843fc4cb7f28b2d6",
+      "sha1": "b16676799cc8aa0f84785bc864b992c21ce36f4a"
+    },
+    {
+      "name": "jbfnm1_hocr_pageindex.json.gz",
+      "size": "6336",
+      "format": "OCR Page Index",
+      "source": "derivative",
+      "md5": "d23c3fb636a333dbf8420eac6bca5ee1",
+      "sha1": "9fa069711d1e5b4e23b4b162b44e09c142d064ad"
+    },
+    {
+      "name": "jbfnm1_hocr_searchtext.txt.gz",
+      "size": "486601",
+      "format": "OCR Search Text",
+      "source": "derivative",
+      "md5": "be5ea498316b7f6ddadcba6b0f6f5920",
+      "sha1": "43cf19ac7d536109652ac311e39c8d0aedac013c"
+    },
+    {
+      "name": "jbfnm1_jp2.zip",
+      "size": "199262716",
+      "format": "Single Page Processed JP2 ZIP",
+      "source": "derivative",
+      "md5": "3b2dedc530d47cd402573752a51b5e36",
+      "sha1": "5776be4ff7be36031926f2fd56cbb5d13ac7f750"
+    },
+    {
+      "name": "jbfnm1_page_numbers.json",
+      "size": "89628",
+      "format": "Page Numbers JSON",
+      "source": "derivative",
+      "md5": "caf1f255312fec075d32fa2c75cfc30d",
+      "sha1": "be76a5ab8b93733009e6125ef4f02f699e7b2e01"
+    },
+    {
+      "name": "jbfnm1_scandata.xml",
+      "size": "169321",
+      "format": "Scandata",
+      "source": "derivative",
+      "md5": "624894a7fd6d6f3cf19dd8a88ba357bd",
+      "sha1": "a9fb721e66b5f134b47c67a6b00d158cf75283a2"
+    },
+    {
+      "name": "jbfnm1_text.pdf",
+      "size": "18745277",
+      "format": "Additional Text PDF",
+      "source": "derivative",
+      "md5": "12355208a698e04e009511fb131a6fb9",
+      "sha1": "8404672b0c9eae320925dcbbe43582eded0dc2aa"
+    }
+  ]
+}
